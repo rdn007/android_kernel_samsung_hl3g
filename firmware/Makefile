@@ -146,9 +146,9 @@ fw-shipped-$(CONFIG_EPEN_WACOM_G9PM) += epen/W9001_HL_EUR.bin
 fw-shipped-$(CONFIG_TOUCHSCREEN_MELFAS_M2) += tsp_melfas/m2/mms_ts_m2.fw
 TSPFIRMWARE_DIRECTORY = firmware/tsp_atmel
 ifeq ($(shell test -d $(TSPFIRMWARE_DIRECTORY) && echo yes),yes)
-fw-shipped-$(CONFIG_TOUCHSCREEN_MXT540E) += tsp_atmel/mXT540E.fw
+fw-shipped-$(CONFIG_TOUCHSCREEN_MXT540E) += tsp_atmel/mXT540E.fw.ihex
 else
-$(warning '$(TSPFIRMWARE_DIRECTORY)' directory dose not exist)
+$(warning '$(TSPFIRMWARE_DIRECTORY)' directory does not exist) # Nice spelling Samsung! It's does and not dose...!
 endif
 
 TSPFIRMWARE_DIRECTORY_MEL_NOTE = firmware/tsp_melfas/note
